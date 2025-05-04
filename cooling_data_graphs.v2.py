@@ -806,5 +806,4 @@ for lang_code, handler in current_lang_handlers.items():
     logger.removeHandler(handler)
     handler.close()
 
-# It's generally good practice to shut down logging, though often not strictly necessary
 logging.shutdown()
