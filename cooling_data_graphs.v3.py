@@ -893,4 +893,4 @@ for lang_code, handler in list(current_lang_handlers.items()): # Use list copy
     handler.close()
 
 # It's generally good practice to shut down logging, though often not strictly necessary
-# logging.shutdown()
+logging.shutdown()
