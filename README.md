@@ -1,4 +1,7 @@
+[Read this document in Portuguese / Leia este documento em Português](README.pt.md)
+
 # Laptop Cooling Pad Performance Analysis: DELTA B3112GG on HP Victus 15
+
 
 ## Overview
 
@@ -181,18 +184,19 @@ This section presents the key findings from the thermal tests comparing the diff
 
 The statistical analysis confirms the visual trend observed in the scatter plots:
 
-    
-
-IGNORE_WHEN_COPYING_START
-Use code with caution. Markdown
-IGNORE_WHEN_COPYING_END
 --- Correlation Analysis (RPM vs Steady State Temp) ---
+
 CPU: Pearson Correlation Coefficient = -0.938
+
 GPU: Pearson Correlation Coefficient = -0.947
+
 Strong negative correlation found for CPU, supporting the alternative hypothesis (H₁).
+
 Strong negative correlation found for GPU, supporting the alternative hypothesis (H₁).
 
       
+--------------------
+
 **Interpretation:**
 
 *   Both CPU and GPU temperatures show a **strong negative correlation** with the cooling pad's fan speed (correlation coefficients close to -1.0).
