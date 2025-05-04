@@ -23,7 +23,7 @@ The goal is to quantify the impact of the cooling pad and its fan speed on CPU a
 ## Methodology
 
 1.  **Data Collection (`cooling_test.sh` - Example Script):**
-    *   A bash script (`cooling_test.sh` or similar, adapted for each test condition) is used to run a CPU stress test (`stress-ng`) for a defined duration (e.g., 600 seconds).
+    *   A bash script (`cooling_test.sh`, adapted for each test condition) is used to run a CPU stress test (`stress-ng`) for a defined duration (e.g., 600 seconds).
     *   Simultaneously, the script logs CPU temperatures (from `lm-sensors`) and GPU temperature (from `nvidia-smi` or `lm-sensors`) at regular intervals (e.g., every 5 seconds).
     *   Temperature data is appended to a CSV file specific to the test condition.
     *   **Important:** The provided bash script example needs modification or manual renaming of output files for different test runs (baselines, different RPMs). The example script currently hardcodes the output to `cooling_stand.csv`. You would need to run the script multiple times, adjusting the test setup (no pad, pad off, pad on with specific RPM) and saving the output to appropriately named CSV files (see Data Files section).
@@ -77,15 +77,7 @@ The primary hypothesis tested by the scatter plot and correlation analysis is:
     ```bash
     pip install pandas matplotlib numpy scipy
     ```
-    Alternatively, create a `requirements.txt` file with the following content:
-    ```text
-    # requirements.txt
-    pandas
-    matplotlib
-    numpy
-    scipy
-    ```
-    And install using:
+    Alternatively, you can run these comand:  
     ```bash
     pip install -r requirements.txt
     ```
