@@ -1,0 +1,58 @@
+2025-05-04 10:50:42 - Log file created: /home/teitei/DELTA-B3112GG/cooling_plots_multilang/results_en.txt
+2025-05-04 10:50:42 - Processing baseline files...
+2025-05-04 10:50:42 -   Processed: ground.csv as 'Ground'
+2025-05-04 10:50:42 -   Processed: normal_stand.csv as 'Normal Stand'
+2025-05-04 10:50:42 -   Processed: cooling_stand.csv as 'Cooling Stand'
+2025-05-04 10:50:42 - 
+Processing test files...
+2025-05-04 10:50:42 -   Processed: cooling_Test_300.csv (Speed: 300 RPM)
+2025-05-04 10:50:42 -   Processed: cooling_Test_500.csv (Speed: 500 RPM)
+2025-05-04 10:50:42 -   Processed: cooling_Test_1000.csv (Speed: 1000 RPM)
+2025-05-04 10:50:42 -   Processed: cooling_Test_1500.csv (Speed: 1500 RPM)
+2025-05-04 10:50:42 -   Processed: cooling_Test_2000.csv (Speed: 2000 RPM)
+2025-05-04 10:50:42 -   Processed: cooling_Test_2200.csv (Speed: 2200 RPM)
+2025-05-04 10:50:42 - 
+Processed 9 total datasets for plotting.
+2025-05-04 10:50:42 - Dataset labels: ['Ground', 'Normal Stand', 'Cooling Stand', '300 RPM', '500 RPM', '1000 RPM', '1500 RPM', '2000 RPM', '2200 RPM']
+2025-05-04 10:50:42 - 
+--- Hypothesis ---
+2025-05-04 10:50:42 - Null Hypothesis (H₀): Increasing fan speed does not decrease steady-state CPU/GPU temperature (correlation is ≥ 0).
+2025-05-04 10:50:42 - Alternative Hypothesis (H₁): Increasing fan speed decreases steady-state CPU/GPU temperature (correlation is < 0).
+2025-05-04 10:50:42 - --------------------
+2025-05-04 10:50:42 - 
+Calculating steady-state means (data after 420 seconds)...
+2025-05-04 10:50:42 -   Ground: Mean CPU = 92.21°C, Mean GPU = 58.97°C
+2025-05-04 10:50:42 -   Normal Stand: Mean CPU = 87.34°C, Mean GPU = 54.12°C
+2025-05-04 10:50:42 -   Cooling Stand: Mean CPU = 88.06°C, Mean GPU = 55.62°C
+2025-05-04 10:50:42 -   300 RPM: Mean CPU = 86.13°C, Mean GPU = 54.00°C
+2025-05-04 10:50:42 -   500 RPM: Mean CPU = 85.16°C, Mean GPU = 53.06°C
+2025-05-04 10:50:42 -   1000 RPM: Mean CPU = 84.18°C, Mean GPU = 52.00°C
+2025-05-04 10:50:42 -   1500 RPM: Mean CPU = 82.87°C, Mean GPU = 51.00°C
+2025-05-04 10:50:42 -   2000 RPM: Mean CPU = 83.34°C, Mean GPU = 51.06°C
+2025-05-04 10:50:42 -   2200 RPM: Mean CPU = 81.43°C, Mean GPU = 49.00°C
+2025-05-04 10:50:42 - 
+--- Generating plots and logging for language: en ---
+2025-05-04 10:50:43 - Plot saved: ./cooling_plots_multilang/en/cpu_temp_vs_time.png
+2025-05-04 10:50:43 - Plot saved: ./cooling_plots_multilang/en/gpu_temp_vs_time.png
+2025-05-04 10:50:43 - Plot saved: ./cooling_plots_multilang/en/temp_distribution_boxplot.png
+2025-05-04 10:50:43 - Plot saved: ./cooling_plots_multilang/en/steady_state_average_temps_bar.png
+2025-05-04 10:50:44 - Plot saved: ./cooling_plots_multilang/en/temp_vs_fan_speed_scatter.png
+2025-05-04 10:50:44 - Arquivo de log criado: /home/teitei/DELTA-B3112GG/cooling_plots_multilang/results_pt.txt
+2025-05-04 10:50:44 - 
+--- Gerando gráficos e log para o idioma: pt ---
+2025-05-04 10:50:44 - Plot saved: ./cooling_plots_multilang/pt/cpu_temp_vs_time.png
+2025-05-04 10:50:44 - Plot saved: ./cooling_plots_multilang/pt/gpu_temp_vs_time.png
+2025-05-04 10:50:44 - Plot saved: ./cooling_plots_multilang/pt/temp_distribution_boxplot.png
+2025-05-04 10:50:45 - Plot saved: ./cooling_plots_multilang/pt/steady_state_average_temps_bar.png
+2025-05-04 10:50:45 - Plot saved: ./cooling_plots_multilang/pt/temp_vs_fan_speed_scatter.png
+2025-05-04 10:50:45 - Removendo manipulador de log para o idioma: pt
+2025-05-04 10:50:45 - 
+--- Correlation Analysis (RPM vs Steady State Temp) ---
+2025-05-04 10:50:45 - CPU: Pearson Correlation Coefficient = -0.938
+2025-05-04 10:50:45 - GPU: Pearson Correlation Coefficient = -0.947
+2025-05-04 10:50:45 -   Strong negative correlation found for CPU, supporting the alternative hypothesis (H₁).
+2025-05-04 10:50:45 -   Strong negative correlation found for GPU, supporting the alternative hypothesis (H₁).
+2025-05-04 10:50:45 - -------------------------------------------------------
+2025-05-04 10:50:45 - 
+Processing complete.
+2025-05-04 10:50:45 - Closing final log handler for language: en

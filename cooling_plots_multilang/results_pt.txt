@@ -1,0 +1,9 @@
+2025-05-04 10:50:44 - Arquivo de log criado: /home/teitei/DELTA-B3112GG/cooling_plots_multilang/results_pt.txt
+2025-05-04 10:50:44 - 
+--- Gerando gráficos e log para o idioma: pt ---
+2025-05-04 10:50:44 - Plot saved: ./cooling_plots_multilang/pt/cpu_temp_vs_time.png
+2025-05-04 10:50:44 - Plot saved: ./cooling_plots_multilang/pt/gpu_temp_vs_time.png
+2025-05-04 10:50:44 - Plot saved: ./cooling_plots_multilang/pt/temp_distribution_boxplot.png
+2025-05-04 10:50:45 - Plot saved: ./cooling_plots_multilang/pt/steady_state_average_temps_bar.png
+2025-05-04 10:50:45 - Plot saved: ./cooling_plots_multilang/pt/temp_vs_fan_speed_scatter.png
+2025-05-04 10:50:45 - Removendo manipulador de log para o idioma: pt
