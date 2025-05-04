@@ -138,3 +138,64 @@ Values should be numeric. Non-numeric values or missing readings will be handled
     *   `STRESS_TIME`, `INTERVAL`: Modify test duration and sampling frequency.
     *   `CSV_FILE`: **Crucially, modify this or the script's logic to save different filenames for different tests.**
     *   `sensors` / `nvidia-smi` commands: Adapt the `awk`, `grep`, `sed` commands if the output format of these tools differs on your system or for your specific hardware components.
+
+
+
+      
+## Results and Analysis
+
+This section presents the key findings from the thermal tests comparing the different cooling scenarios for the HP Victus 15.
+
+### Temperature Over Time
+
+**CPU Temperature vs. Time:**
+
+![CPU Temperature vs. Time](cooling_plots_multilang/en/cpu_temp_vs_time.png)
+*Description: This plot shows the average CPU temperature progression over the 600-second stress test for each condition. We can observe the initial temperature spike and the gradual stabilization towards a steady state.*
+
+**GPU Temperature vs. Time:**
+
+![GPU Temperature vs. Time](cooling_plots_multilang/en/gpu_temp_vs_time.png)
+*Description: Similar to the CPU plot, this shows the GPU temperature trend over the test duration. Note the distinct temperature curves for each cooling setup.*
+
+### Steady-State Temperature Comparison
+
+**Average Steady-State Temperatures:**
+
+![Average Steady-State Temperature Bar Chart](cooling_plots_multilang/en/steady_state_average_temps_bar.png)
+*Description: This bar chart compares the average CPU and GPU temperatures calculated *after* the system reached a steady state (post 420 seconds). It provides a clear comparison of the effectiveness of each cooling method during sustained load. Lower bars indicate better cooling performance.*
+
+**Steady-State Temperature Distribution:**
+
+![Steady-State Temperature Distribution Box Plot](cooling_plots_multilang/en/temp_distribution_boxplot.png)
+*Description: These box plots visualize the distribution (median, quartiles, range excluding outliers) of CPU and GPU temperatures during the steady-state period (after 420 seconds). They offer insight into both the average temperature and the temperature stability for each condition.*
+
+### Temperature Dependence on Fan Speed
+
+**Steady-State Temperature vs. Fan Speed:**
+
+![Steady-State Temperature vs. Fan Speed Scatter Plot](cooling_plots_multilang/en/temp_vs_fan_speed_scatter.png)
+*Description: These scatter plots directly visualize the relationship between the cooling pad's fan speed (RPM) and the resulting steady-state CPU and GPU temperatures. The dashed lines represent the linear trend, and the equations quantify this relationship. The correlation coefficient (included in the title) measures the strength and direction of this linear relationship.*
+
+### Correlation Analysis (RPM vs. Steady State Temperature)
+
+The statistical analysis confirms the visual trend observed in the scatter plots:
+
+    
+
+IGNORE_WHEN_COPYING_START
+Use code with caution. Markdown
+IGNORE_WHEN_COPYING_END
+--- Correlation Analysis (RPM vs Steady State Temp) ---
+CPU: Pearson Correlation Coefficient = -0.938
+GPU: Pearson Correlation Coefficient = -0.947
+Strong negative correlation found for CPU, supporting the alternative hypothesis (H₁).
+Strong negative correlation found for GPU, supporting the alternative hypothesis (H₁).
+
+      
+**Interpretation:**
+
+*   Both CPU and GPU temperatures show a **strong negative correlation** with the cooling pad's fan speed (correlation coefficients close to -1.0).
+*   This provides strong statistical evidence **supporting the alternative hypothesis (H₁)**: Increasing the fan speed of the DELTA B3112GG cooling pad significantly decreases the steady-state CPU and GPU temperatures of the HP Victus 15 under load.
+
+    
